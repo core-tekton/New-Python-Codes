@@ -36,3 +36,7 @@ for row in cur.execute(sqlstr):
     print(str(row[0]), row[1])
 
 cur.close()
+
+edged = cv2.Canny(blur, 10, 100)
+edged = cv2.dilate(edged, None, iterations=1)
+edged = cv2.erode(edged, None, iterations=1)
