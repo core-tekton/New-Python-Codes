@@ -13,8 +13,5 @@ js = json.loads(data)
 print(json.dumps(js,indent=4))
 
 for item in js['comments']:
-    count = count + item['count']
+    count += item['count']
 print(count)
-
-
-
